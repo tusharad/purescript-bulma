@@ -3,12 +3,13 @@
 module Bulma.Modifiers.Helpers
   ( Helpers(..)
   , is
+  , isPrimary
   )where
 
 import Prelude
 
-import Bulma.Common (class ClassHelper, ClassName, ClassPart(..), isClass, toClassPart)
-
+import Bulma.Common (class ClassHelper, ClassName, ClassPart(..), isClass, toClassPart,Color(..))
+import Bulma.Modifiers.Modifiers (isColor)
 
 data Helpers
   = Clearfix
@@ -22,6 +23,7 @@ data Helpers
   | Shadowless
   | Unsectable
   | Invisible
+  | Shadow
 
 instance chHelpers :: ClassHelper Helpers where
   toClassPart Clearfix = ClassPart "clearfix"
@@ -35,7 +37,12 @@ instance chHelpers :: ClassHelper Helpers where
   toClassPart Shadowless = ClassPart "shadowless"
   toClassPart Unsectable = ClassPart "unselectable"
   toClassPart Invisible = ClassPart "invisible"
+  toClassPart Shadow = ClassPart "shadow"
 
 -- | Sets a `Helper`
 is :: Helpers -> ClassName
 is = isClass <<< toClassPart
+
+-- | Helper functions for color
+isPrimary :: ClassName
+isPrimary = isColor Primary

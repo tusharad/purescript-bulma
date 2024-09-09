@@ -18,12 +18,20 @@ module Bulma.Components.Navbar
   , navbarDropdown
   , navbarDivider
   , State(..)
+  -- new functions
+  , hasFixed
+  , hasNavbarFixed
+  , hasNavbarFixedTop
+  , hasNavbarFixedBottom
+  , isFixedTop
+  , hasShadow
   ) where
 
 import Prelude
 
 import Bulma.Common (class ClassHelper, ClassName, ClassPart(..), hasClass, isClass, joinClassParts, toClassName, toClassPart)
 import Bulma.Common (Color) as C
+import Bulma.Modifiers.Helpers (Helpers(..))
 
 -- | `.navbar` class
 navbar :: ClassName
@@ -129,3 +137,25 @@ dropdownPart = ClassPart "dropdown"
 navbarClass :: ClassPart -> ClassName
 navbarClass cp =
   toClassName $ joinClassParts [navbarPart, cp]
+
+-- New version
+hasFixed :: FixedPosition -> ClassName
+hasFixed = hasClass <<< toClassPart
+
+hasNavbarFixed :: FixedPosition -> ClassName
+hasNavbarFixed pos = hasClass $ joinClassParts [navbarPart ,toClassPart pos]
+
+-- "has-navbar-fixed-top"
+hasNavbarFixedTop :: ClassName
+hasNavbarFixedTop = hasNavbarFixed Top
+
+-- "has-navbar-fixed-bottom"
+hasNavbarFixedBottom :: ClassName
+hasNavbarFixedBottom = hasNavbarFixed Bottom
+
+-- "is-fixed-top"
+isFixedTop :: ClassName
+isFixedTop = isFixed Top
+
+hasShadow :: ClassName
+hasShadow = hasClass $ toClassPart Shadow
