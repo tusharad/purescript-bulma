@@ -7,6 +7,8 @@
 /.psc*
 /.purs*
 /.psa*
+/.spago
+spago.lock
 
 yarn.lock
 # ^ We don't need `yarn.lock` to publish `purescript-bulma`,

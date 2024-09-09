@@ -5,8 +5,8 @@ module Bulma.Common where
 import Prelude
 
 import Data.Generic.Rep (class Generic)
-import Data.Generic.Rep.Show (genericShow)
 import Data.Newtype (class Newtype, over, unwrap, wrap)
+import Data.Show.Generic (genericShow)
 import Data.String (joinWith)
 
 -- | Sets an `Alignment`
