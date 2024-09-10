@@ -8,11 +8,36 @@ module Bulma.Columns.Size
   , isPercentSize
   , isPercentSizeResponsive
   , isSize
+  , is1
+  , is2
+  , is3
+  , is4
+  , is5
+  , is6
+  , is7
+  , is8
+  , is9
+  , is10
+  , is11
+  , is12
+  , isSize1
+  , isSize2
+  , isSize3
+  , isSize4
+  , isSize5
+  , isSize6
+  , isSize7
+  , isSize8
+  , isSize9
+  , isSize10
+  , isSize11
+  , isSize12
+  , isSmall
   ) where
 
 import Prelude
 
-import Bulma.Common (class ClassHelper, Breakpoint, ClassName, ClassPart(..), Is(..), notSupported, isClass, joinClassParts, toClassPart)
+import Bulma.Common (class ClassHelper,Size(..), Breakpoint, ClassName(..), ClassPart(..), Is(..), isClass, joinClassParts, notSupported, toClassPart)
 
 -- | [Percentage sizes](https://bulma.io/documentation/columns/sizes/)
 data PercentSize
@@ -74,3 +99,81 @@ isNarrowResponsive bp = isClass $ joinClassParts [ClassPart "narrow", toClassPar
 
 isOffsetClass :: ClassPart -> ClassName
 isOffsetClass s = isClass $ joinClassParts [ClassPart "offset", s]
+
+is :: String -> ClassName
+is s = isClass $ joinClassParts [ClassPart s]
+
+is1 :: ClassName
+is1 = is "1"
+
+is2 :: ClassName
+is2 = is "2"
+
+is3 :: ClassName
+is3 = is "3"
+
+is4 :: ClassName
+is4 = is "4"
+
+is5 :: ClassName
+is5 = is "5"
+
+is6 :: ClassName
+is6 = is "6"
+
+is7 :: ClassName
+is7 = is "7"
+
+is8 :: ClassName
+is8 = is "8"
+
+is9 :: ClassName
+is9 = is "9"
+
+is10 :: ClassName
+is10 = is "10"
+
+is11 :: ClassName
+is11 = is "11"
+
+is12 :: ClassName
+is12 = is "12"
+
+isSize1 :: ClassName
+isSize1 = isSize Is1
+
+isSize2 :: ClassName
+isSize2 = isSize Is2
+
+isSize3 :: ClassName
+isSize3 = isSize Is3
+
+isSize4 :: ClassName
+isSize4 = isSize Is4
+
+isSize5 :: ClassName
+isSize5 = isSize Is5
+
+isSize6 :: ClassName
+isSize6 = isSize Is6
+
+isSize7 :: ClassName
+isSize7 = isSize Is7
+
+isSize8 :: ClassName
+isSize8 = isSize Is8
+
+isSize9 :: ClassName
+isSize9 = isSize Is9
+
+isSize10 :: ClassName
+isSize10 = isSize Is10
+
+isSize11 :: ClassName
+isSize11 = isSize Is11
+
+isSize12 :: ClassName
+isSize12 = isSize Is12
+
+isSmall :: ClassName
+isSmall = isClass $ toClassPart Small

@@ -4,11 +4,13 @@ module Bulma.Modifiers.Helpers
   ( Helpers(..)
   , is
   , isPrimary
+  , isWarning
+  , isInfo
   )where
 
 import Prelude
 
-import Bulma.Common (class ClassHelper, ClassName, ClassPart(..), isClass, toClassPart,Color(..))
+import Bulma.Common (class ClassHelper, ClassName, ClassPart(..), Color(..), isClass, toClassPart)
 import Bulma.Modifiers.Modifiers (isColor)
 
 data Helpers
@@ -44,5 +46,14 @@ is :: Helpers -> ClassName
 is = isClass <<< toClassPart
 
 -- | Helper functions for color
+{- is-primary -}
 isPrimary :: ClassName
 isPrimary = isColor Primary
+
+{- is-warining -}
+isWarning :: ClassName
+isWarning = isColor Warning
+
+{- is-info -}
+isInfo :: ClassName
+isInfo = isColor Info

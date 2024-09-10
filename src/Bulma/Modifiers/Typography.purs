@@ -13,6 +13,7 @@ module Bulma.Modifiers.Typography
   , isSize
   , Transformation(..)
   , Weight(..)
+  , hasTextCentered
   ) where
 
 import Prelude
@@ -156,3 +157,6 @@ hasWeight = hasTextClass <<< toClassPart
 hasTextClass  :: ClassPart -> ClassName
 hasTextClass  str =
   hasClass $ joinClassParts [ClassPart "text", str]
+
+hasTextCentered :: ClassName
+hasTextCentered = hasTextClass $ toClassPart Centered

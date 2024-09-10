@@ -9,6 +9,8 @@ module Bulma.Elements.Button
   , isStyle
   , State(..)
   , isState
+  , isLight
+  , isActive
   ) where
 
 import Prelude
@@ -81,3 +83,10 @@ isState st =
   if st == Normal 
     then emptyClass
     else isClass $ toClassPart st
+
+-- | Helper color classes
+isLight :: ClassName
+isLight = isColor Light
+
+isActive :: ClassName
+isActive = isClass $ toClassPart Active

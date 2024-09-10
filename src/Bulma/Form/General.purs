@@ -17,6 +17,7 @@ module Bulma.Form.General
   , isHorizontal
   , label
   , radio
+  , isCentered
   ) where
 
 import Prelude
@@ -95,3 +96,7 @@ isGroupedRight = isClass $ joinClassParts [groupedPart, ClassPart "right"]
 -- | `.is-horizontal` class
 isHorizontal :: ClassName
 isHorizontal = isClass $ ClassPart "horizontal"
+
+-- | `.is-centered` class
+isCentered :: ClassName
+isCentered = isClass $ ClassPart "centered"
