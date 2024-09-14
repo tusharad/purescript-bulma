@@ -2,7 +2,7 @@ module Bulma.Columns.SizesTest where
 
 import Prelude
 
-import Bulma.Columns.Size (PercentSize(..), isNarrow, isOffset, isPercentOffset, isPercentSize, isNarrowResponsive, isPercentSizeResponsive, isSize)
+import Bulma.Columns.Size (PercentSize(..), isNarrow, isNarrowResponsive, isOffset, isPercentOffset, isPercentSize, isPercentSizeResponsive, isSize)
 import Bulma.Common (Breakpoint(..), ClassName(..), Is(..))
 import Control.Monad.Free (Free)
 import Test.Unit (TestF, suite, test)
@@ -33,6 +33,8 @@ testSuiteSize =
       isPercentSize ThreeFifths `equal` ClassName "is-three-fifths"
       isPercentSize TwoFifths `equal` ClassName "is-two-fifths"
       isPercentSize OneFifth `equal` ClassName "is-one-fifth"
+      isPercentSize Half `equal` ClassName "is-half"
+
     test "percent sizes mobile" do
       isPercentSizeResponsive ThreeQuarters Mobile `equal` ClassName "is-three-quarters-mobile"
       isPercentSizeResponsive TwoThirds Mobile `equal` ClassName "is-two-thirds-mobile"
@@ -42,6 +44,7 @@ testSuiteSize =
       isPercentSizeResponsive ThreeFifths Mobile `equal` ClassName "is-three-fifths-mobile"
       isPercentSizeResponsive TwoFifths Mobile `equal` ClassName "is-two-fifths-mobile"
       isPercentSizeResponsive OneFifth Mobile `equal` ClassName "is-one-fifth-mobile"
+      isPercentSizeResponsive Half Mobile `equal` ClassName "is-half-mobile"
     test "percent sizes desktop" do
       isPercentSizeResponsive ThreeQuarters Desktop `equal` ClassName "is-three-quarters-desktop"
       isPercentSizeResponsive TwoThirds Desktop `equal` ClassName "is-two-thirds-desktop"
@@ -51,6 +54,7 @@ testSuiteSize =
       isPercentSizeResponsive ThreeFifths Desktop `equal` ClassName "is-three-fifths-desktop"
       isPercentSizeResponsive TwoFifths Desktop `equal` ClassName "is-two-fifths-desktop"
       isPercentSizeResponsive OneFifth Desktop `equal` ClassName "is-one-fifth-desktop"
+      isPercentSizeResponsive Half Desktop `equal` ClassName "is-half-desktop"
     test "percent sizes tablet" do
       isPercentSizeResponsive ThreeQuarters Tablet `equal` ClassName "is-three-quarters-tablet"
       isPercentSizeResponsive TwoThirds Tablet `equal` ClassName "is-two-thirds-tablet"
@@ -60,6 +64,7 @@ testSuiteSize =
       isPercentSizeResponsive ThreeFifths Tablet `equal` ClassName "is-three-fifths-tablet"
       isPercentSizeResponsive TwoFifths Tablet `equal` ClassName "is-two-fifths-tablet"
       isPercentSizeResponsive OneFifth Tablet `equal` ClassName "is-one-fifth-tablet"
+      isPercentSizeResponsive Half Tablet `equal` ClassName "is-half-tablet"
     test "offset" do
       isOffset Is2 `equal` ClassName "is-offset-2"
       isOffset Is3 `equal` ClassName "is-offset-3"
@@ -80,6 +85,7 @@ testSuiteSize =
       isPercentOffset ThreeFifths `equal` ClassName "is-offset-three-fifths"
       isPercentOffset TwoFifths `equal` ClassName "is-offset-two-fifths"
       isPercentOffset OneFifth `equal` ClassName "is-offset-one-fifth"
+      isPercentOffset Half `equal` ClassName "is-offset-half"
     test "narrow" do
       isNarrow `equal` ClassName "is-narrow"
     test "responsive narrow" do

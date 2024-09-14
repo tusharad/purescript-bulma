@@ -14,7 +14,7 @@ module Bulma.Modifiers.Typography
   , Transformation(..)
   , Weight(..)
   , hasTextCentered
-   , isSize1
+  , isSize1
   , isSize2
   , isSize3
   , isSize4
