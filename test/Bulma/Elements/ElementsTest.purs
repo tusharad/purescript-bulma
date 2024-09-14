@@ -3,7 +3,7 @@ module Bulma.Elements.ElementsTest where
 import Prelude
 
 import Bulma.Common (ClassName(..))
-import Bulma.Elements.Elements (box, content, delete, icon, notification, progress)
+import Bulma.Elements.Elements (block, box, content, delete, icon, notification, progress)
 import Control.Monad.Free (Free)
 import Test.Unit (TestF, suite, test)
 import Test.Unit.Assert (equal)
@@ -23,3 +23,5 @@ testSuiteElements =
       notification `equal` ClassName "notification"
     test "progress" do
       progress `equal` ClassName "progress"
+    test "block" do
+      block `equal` ClassName "block"

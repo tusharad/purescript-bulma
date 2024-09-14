@@ -14,6 +14,7 @@ module Bulma.Elements.Elements
   , iconPart
   , notification
   , progress
+  , block
   ) where
 
 import Bulma.Common (ClassName(..), ClassPart(..), toClassName)
@@ -44,3 +45,7 @@ notification = ClassName "notification"
 -- | `.progress` class
 progress :: ClassName
 progress = ClassName "progress"
+
+-- | `.block` class
+block :: ClassName
+block = ClassName "block"
