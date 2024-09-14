@@ -26,3 +26,7 @@ isMultiline = isClass $ ClassPart "multiline"
 -- | `.is-gapless` class
 isGapless :: ClassName
 isGapless = isClass $ ClassPart "gapless"
+
+-- | `.is-vcentered` class
+isVcentered :: ClassName
+isVcentered = isClass $ ClassPart "vcentered"
