@@ -3,7 +3,7 @@ module Bulma.Modifiers.ResponsiveTest where
 import Prelude
 
 import Bulma.Common (Breakpoint(..), ClassName(..))
-import Bulma.Modifiers.Responsive (isBreakpoint, isHiddenResponsive, isBlockResponsive, isFlexResponsive, isInlineResponsive, isInlineBlockResponsive , isInlineFlexResponsive)
+import Bulma.Modifiers.Responsive (isBreakpoint, isHiddenResponsive, isBlockResponsive, isFlexResponsive, isInlineResponsive, isInlineBlockResponsive , isInlineFlexResponsive,isResponsive)
 import Control.Monad.Free (Free)
 import Test.Unit (TestF, suite, test)
 import Test.Unit.Assert (equal)
@@ -11,6 +11,8 @@ import Test.Unit.Assert (equal)
 testSuiteResponsive :: Free TestF Unit
 testSuiteResponsive =
   suite "Responsive" do
+    test "Responsive" $ do
+       isResponsive `equal` ClassName "is-responsive"
     test "show flex" do
       isFlexResponsive Mobile `equal` ClassName "is-flex-mobile"
       isFlexResponsive Tablet `equal` ClassName "is-flex-tablet"

@@ -9,6 +9,7 @@ module Bulma.Modifiers.Responsive
   , isInlineFlexResponsive
   , isInlineResponsive
   , isInlineFlex
+  , isResponsive
   )where
 
 import Prelude
@@ -71,3 +72,7 @@ inlineFlexPart =
 inlineFlexPart' :: ClassPart -> ClassPart
 inlineFlexPart' str =
   inlinePart $ joinClassParts [ClassPart "flex", str]
+
+-- | `is-responsive` modifier
+isResponsive :: ClassName
+isResponsive = isClass $ ClassPart "responsive"
