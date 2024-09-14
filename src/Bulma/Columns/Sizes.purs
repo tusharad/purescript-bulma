@@ -20,19 +20,8 @@ module Bulma.Columns.Size
   , is10
   , is11
   , is12
-  , isSize1
-  , isSize2
-  , isSize3
-  , isSize4
-  , isSize5
-  , isSize6
-  , isSize7
-  , isSize8
-  , isSize9
-  , isSize10
-  , isSize11
-  , isSize12
   , isSmall
+  , isOneQuarter
   ) where
 
 import Prelude
@@ -139,41 +128,8 @@ is11 = is "11"
 is12 :: ClassName
 is12 = is "12"
 
-isSize1 :: ClassName
-isSize1 = isSize Is1
-
-isSize2 :: ClassName
-isSize2 = isSize Is2
-
-isSize3 :: ClassName
-isSize3 = isSize Is3
-
-isSize4 :: ClassName
-isSize4 = isSize Is4
-
-isSize5 :: ClassName
-isSize5 = isSize Is5
-
-isSize6 :: ClassName
-isSize6 = isSize Is6
-
-isSize7 :: ClassName
-isSize7 = isSize Is7
-
-isSize8 :: ClassName
-isSize8 = isSize Is8
-
-isSize9 :: ClassName
-isSize9 = isSize Is9
-
-isSize10 :: ClassName
-isSize10 = isSize Is10
-
-isSize11 :: ClassName
-isSize11 = isSize Is11
-
-isSize12 :: ClassName
-isSize12 = isSize Is12
-
 isSmall :: ClassName
 isSmall = isClass $ toClassPart Small
+
+isOneQuarter :: ClassName
+isOneQuarter = isPercentSize OneQuarter

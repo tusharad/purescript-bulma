@@ -73,7 +73,7 @@ cardClass cp =
 
 cardHeaderClass :: ClassPart -> ClassName
 cardHeaderClass cp =
-  toClassName $ joinClassParts [cardPart, cardHeaderPart, cp]
+  toClassName $ joinClassParts [ cardHeaderPart, cp]
 
 cardFooterClass :: ClassPart -> ClassName
 cardFooterClass cp =

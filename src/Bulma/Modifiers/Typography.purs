@@ -14,6 +14,12 @@ module Bulma.Modifiers.Typography
   , Transformation(..)
   , Weight(..)
   , hasTextCentered
+   , isSize1
+  , isSize2
+  , isSize3
+  , isSize4
+  , isSize5
+  , isSize6
   ) where
 
 import Prelude
@@ -160,3 +166,24 @@ hasTextClass  str =
 
 hasTextCentered :: ClassName
 hasTextCentered = hasTextClass $ toClassPart Centered
+
+isSize1 :: ClassName
+isSize1 = isSize Size1
+
+isSize2 :: ClassName
+isSize2 = isSize Size2
+
+isSize3 :: ClassName
+isSize3 = isSize Size3
+
+isSize4 :: ClassName
+isSize4 = isSize Size4
+
+isSize5 :: ClassName
+isSize5 = isSize Size5
+
+isSize6 :: ClassName
+isSize6 = isSize Size6
+
+isSize7 :: ClassName
+isSize7 = isSize Size7
