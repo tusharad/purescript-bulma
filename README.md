@@ -10,9 +10,12 @@
 npm install bulma
 ```
 
-2. Install `purescript-bulma`
-```bash
-spago install purescript-bulma
+2. Add this repository into your spago.yaml
+```yaml
+  extraPackages:
+    bulma:
+       git: https://github.com/tusharad/purescript-bulma/
+       ref: <latest commit hash>
 ```
 
 ## Documentation
@@ -23,7 +26,8 @@ Note: Above documentation is from the original repository which is now unmaintai
 
 ## Example
 
-_coming soon_
+_coming soon_. You can find below project using this repo.
+- [Redddit Clone Haskell](https://github.com/tusharad/Reddit-Clone-Haskell/tree/main/haskread-platform-ui)
 
 ## Supported `Bulma` classes
 
