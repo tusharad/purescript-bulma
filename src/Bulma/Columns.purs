@@ -2,8 +2,8 @@
 
 module Bulma.Columns (
     module Bulma.Columns.Columns
-  , module Bulma.Columns.Sizes
+  , module Bulma.Columns.Size
 ) where
 
 import Bulma.Columns.Columns
-import Bulma.Columns.Sizes
+import Bulma.Columns.Size
