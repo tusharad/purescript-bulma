@@ -2,12 +2,6 @@
 
 [`PureScript`](http://www.purescript.org/) bindings for CSS framework [`Bulma`](https://github.com/jgthms/bulma).
 
-_Note:_ For using PureScript v.0.11.x use [`psc-0.11.x`](https://github.com/sectore/purescript-bulma/tree/psc-0.11.x) branch.
-
-[![Build Status](https://travis-ci.org/sectore/purescript-bulma.svg?branch=master)](https://travis-ci.org/sectore/purescript-bulma)
-[![purescript-bulma on Pursuit](https://pursuit.purescript.org/packages/purescript-bulma/badge)](https://pursuit.purescript.org/packages/purescript-bulma)
-
-
 
 ## Installation
 
@@ -16,14 +10,16 @@ _Note:_ For using PureScript v.0.11.x use [`psc-0.11.x`](https://github.com/sect
 npm install bulma
 ```
 
-2. Install `purescript-bulma` (supported version: [`v.0.6.1`](https://github.com/jgthms/bulma/releases/tag/0.6.1))
+2. Install `purescript-bulma`
 ```bash
-bower install --save purescript-bulma
+spago install purescript-bulma
 ```
 
 ## Documentation
 
 Module documentation is [published on Pursuit](http://pursuit.purescript.org/packages/purescript-bulma)
+
+Note: Above documentation is from the original repository which is now unmaintained.
 
 ## Example
 
