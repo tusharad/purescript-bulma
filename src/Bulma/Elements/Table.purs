@@ -4,6 +4,7 @@ module Bulma.Elements.Table
   ( isModifier
   , table
   , Modifier(..)
+  , tableContainer
   ) where
 
 import Prelude
@@ -32,3 +33,7 @@ instance chModifier :: ClassHelper Modifier where
 -- | Sets a `Modifier` of a table
 isModifier :: Modifier -> ClassName
 isModifier = isClass <<< toClassPart
+
+-- | `table-container` class
+tableContainer :: ClassName
+tableContainer = ClassName "table-container"

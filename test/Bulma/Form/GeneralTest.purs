@@ -3,7 +3,7 @@ module Bulma.Form.GeneralTest where
 import Prelude
 
 import Bulma.Common (ClassName(..))
-import Bulma.Form.General (IconAlignment(..), button, checkbox, control, field, fieldBody, fieldLabel, hasAddonsCentered, hasAddonsRight, hasIconAlignment, help, isExpanded, isGroupedRight, isHorizontal, label, radio)
+import Bulma.Form.General (IconAlignment(..), button, checkbox, control, field, fieldBody, fieldLabel, hasAddonsCentered, hasAddonsRight, hasIconAlignment, help, isExpanded, isGroupedRight, isHorizontal, label, radio, isTab)
 import Control.Monad.Free (Free)
 import Test.Unit (TestF, suite, test)
 import Test.Unit.Assert (equal)
@@ -19,6 +19,7 @@ testSuiteGeneral =
       radio `equal` ClassName "radio"
       control `equal` ClassName "control"
       isExpanded `equal` ClassName "is-expanded"
+      isTab `equal` ClassName "is-tab"
     test "alignment" do
       hasIconAlignment IconLeft `equal` ClassName "has-icon-left"
       hasIconAlignment IconRight `equal` ClassName "has-icon-right"

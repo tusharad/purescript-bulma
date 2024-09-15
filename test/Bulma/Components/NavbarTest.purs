@@ -2,7 +2,7 @@ module Bulma.Components.NavbarTest where
 
 import Prelude
 
-import Bulma.Components.Navbar (Color(..), FixedPosition(..), State(..), hasDropdown, isColor, isFixed, isState, navbar, navbarBrand, navbarBurger, navbarDivider, navbarDropdown, navbarEnd, navbarItem, navbarLink, navbarMenu, navbarStart)
+import Bulma.Components.Navbar (Color(..), FixedPosition(..), State(..), hasDropdown, isColor, isFixed, isState, navbar, navbarBrand, navbarBurger, navbarDivider, navbarDropdown, navbarEnd, navbarItem, navbarLink, navbarMenu, navbarStart, isTransparent, hasNavbarFixedTop, hasNavbarFixedBottom, hasDropdownUp, isArrowless)
 import Bulma.Common (ClassName(..))
 import Bulma.Common (Color(..)) as C
 import Control.Monad.Free (Free)
@@ -23,10 +23,13 @@ testSuiteNavbar =
       navbarLink `equal` ClassName "navbar-link"
       navbarDropdown `equal` ClassName "navbar-dropdown"
       hasDropdown `equal` ClassName "has-dropdown"
+      hasDropdownUp `equal` ClassName "has-dropdown-up"
       navbarDivider `equal` ClassName "navbar-divider"
     test "fixed position" do
       isFixed Top `equal` ClassName "is-fixed-top"
       isFixed Bottom `equal` ClassName "is-fixed-bottom"
+      hasNavbarFixedTop `equal` ClassName "has-navbar-fixed-top"
+      hasNavbarFixedBottom `equal` ClassName "has-navbar-fixed-bottom"
     test "colors" do
       isColor (CommonColor C.Primary) `equal` ClassName "is-primary"
       isColor (CommonColor C.Link) `equal` ClassName "is-link"
@@ -41,3 +44,7 @@ testSuiteNavbar =
     test "state" do
       isState Active `equal` ClassName "is-active"
       isState Hoverable `equal` ClassName "is-hoverable"
+    test "transparent" do
+       isTransparent `equal` ClassName "is-transparent"
+    test "arrowless" do
+       isArrowless `equal` ClassName "is-arrowless"

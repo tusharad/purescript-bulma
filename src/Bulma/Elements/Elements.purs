@@ -15,9 +15,11 @@ module Bulma.Elements.Elements
   , notification
   , progress
   , block
+  , iconText
   ) where
 
-import Bulma.Common (ClassName(..), ClassPart(..), toClassName)
+import Prelude
+import Bulma.Common (ClassName(..), ClassPart(..), toClassName,joinClassParts)
 
 -- | `.content` class
 content :: ClassName
@@ -49,3 +51,7 @@ progress = ClassName "progress"
 -- | `.block` class
 block :: ClassName
 block = ClassName "block"
+
+-- | `.icon-text` class
+iconText :: ClassName
+iconText = toClassName $ joinClassParts [iconPart, ClassPart "text"]

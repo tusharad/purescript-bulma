@@ -25,6 +25,9 @@ module Bulma.Components.Navbar
   , hasNavbarFixedBottom
   , isFixedTop
   , hasShadow
+  , isTransparent
+  , isArrowless
+  , hasDropdownUp
   ) where
 
 import Prelude
@@ -88,7 +91,7 @@ hasDropdown = hasClass dropdownPart
 
 -- | `.has-dropdown-up` class
 hasDropdownUp :: ClassName
-hasDropdownUp = navbarClass $ joinClassParts [dropdownPart, ClassPart "up"]
+hasDropdownUp = hasClass $ joinClassParts [dropdownPart, ClassPart "up"]
 
 -- | `.navbar-divider` class
 navbarDivider :: ClassName
@@ -159,3 +162,11 @@ isFixedTop = isFixed Top
 
 hasShadow :: ClassName
 hasShadow = hasClass $ toClassPart Shadow
+
+-- | `.is-transparent` class
+isTransparent :: ClassName
+isTransparent = isClass $ ClassPart "transparent"
+
+-- | `.is-arrowless` class
+isArrowless :: ClassName
+isArrowless = isClass $ ClassPart "arrowless"

@@ -19,6 +19,7 @@ module Bulma.Elements.Button
   , areSmall
   , areMedium
   , areLarge
+  , isOutlined
   ) where
 
 import Prelude
@@ -154,3 +155,7 @@ areMedium = areClass $ toClassPart Medium
 -- | `are-large` class
 areLarge :: ClassName
 areLarge = areClass $ toClassPart Large
+
+-- | `is-outlined` class
+isOutlined :: ClassName
+isOutlined = isClass $ toClassPart Outlined

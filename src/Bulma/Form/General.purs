@@ -18,6 +18,7 @@ module Bulma.Form.General
   , label
   , radio
   , isCentered
+  , isTab
   ) where
 
 import Prelude
@@ -100,3 +101,7 @@ isHorizontal = isClass $ ClassPart "horizontal"
 -- | `.is-centered` class
 isCentered :: ClassName
 isCentered = isClass $ ClassPart "centered"
+
+-- | `.is-tab` class
+isTab :: ClassName
+isTab = isClass $ ClassPart "tab"
